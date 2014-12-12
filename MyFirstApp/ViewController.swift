@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         // Ausblenden des KeyBoards nach drücken des Senden Buttons
         nachrichtEingebenTextFeld.resignFirstResponder()
         
+        // Veränderung der Buttonbezeichnung nach drücken des Senden Buttons
         nachrichtSendenButton.setTitle("Nachricht gesendet", forState: UIControlState.Normal)
         
     }
