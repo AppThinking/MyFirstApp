@@ -11,8 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var nachrichtLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     @IBOutlet weak var nameEingebenTextFeld: UITextField!
     @IBOutlet weak var nachrichtEingebenTextFeld: UITextField!
+    
     @IBOutlet weak var nachrichtSendenButton: UIButton!
     
     override func viewDidLoad() {
@@ -34,8 +37,16 @@ class ViewController: UIViewController {
         
         nachrichtEingebenTextFeld.text = ""
         
+        // Label mit Name belegen und Visible schalten
+        nameLabel.text = nameEingebenTextFeld.text
+        nameLabel.hidden = false
+        nameLabel.textColor = UIColor.blueColor()
+        
+        nameEingebenTextFeld.text = ""
+        
         // Ausblenden des KeyBoards nach drücken des Senden Buttons
         nachrichtEingebenTextFeld.resignFirstResponder()
+        nameEingebenTextFeld.resignFirstResponder()
         
         // Veränderung der Buttonbezeichnung nach drücken des Senden Buttons
         nachrichtSendenButton.setTitle("Nachricht gesendet", forState: UIControlState.Normal)
