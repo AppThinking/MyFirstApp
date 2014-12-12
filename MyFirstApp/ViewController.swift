@@ -27,6 +27,7 @@ class ViewController: UIViewController {
 
     @IBAction func nachrichtSendenButtonGedrueckt(sender: UIButton) {
     
+        // Label mit Nachricht belegen und Visible schalten
         nachrichtLabel.text = nachrichtEingebenTextFeld.text
         nachrichtLabel.hidden = false
         nachrichtLabel.textColor = UIColor.redColor()
